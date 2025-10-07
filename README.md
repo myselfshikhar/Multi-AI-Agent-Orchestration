@@ -29,19 +29,19 @@ A key feature is its **explainability logging**, which records the reasoning of 
 The assistant orchestrates a five-step workflow, where the output of one agent becomes the input for the next, ensuring a logical flow of analysis.
 
 
-User Query
-│
-└───> 1. Research Agent (Fetches Data)
-│
-└───> 2. Summarizer Agent (Simplifies Data)
-│
-└───> 3. Calculator Agent (Performs Math)
-│
-└───> 4. Critic Agent (Validates & Finds Risks)
-│
-└───> 5. Synthesizer Agent (Creates Final Answer)
-│
-└───> Final Answer to User
+User Query \
+│ \
+└───> 1. Research Agent (Fetches Data)\
+│\
+└───> 2. Summarizer Agent (Simplifies Data)\
+│\
+└───> 3. Calculator Agent (Performs Math)\
+│\
+└───> 4. Critic Agent (Validates & Finds Risks)\
+│\
+└───> 5. Synthesizer Agent (Creates Final Answer)\
+│\
+└───> Final Answer to User\
 
 
 ---
@@ -101,21 +101,26 @@ The application will start, and you can begin asking financial questions.
 
 Example Session
 Your Question:
-
+```sh
 I'm thinking about investing in Apple. If I bought a share at $150 and it's now worth $175.50, what is my ROI? Based on its current data, what are the key takeaways and risks?
+```
+
 Terminal Output:
 The program will first display the detailed logs from each agent, followed by the final synthesized answer.
-
+```sh
 --- Explainability Logs ---
 **Calculator Agent**: Performed calculation: Return on Investment (ROI) is 17.00%.
 **Critic Agent**: Provided critique: While the 17.00% ROI is strong, the positive analyst ratings and sales forecasts must be weighed against the noted risks of high competition and regulatory scrutiny.
 **Research Agent**: Identified ticker 'AAPL' and fetched data: {'ticker': 'AAPL', 'price': 175.5, ...}
 **Summarizer Agent**: Created summary: - Apple (AAPL) is currently trading at $175.50 with a Strong Buy rating from analysts...
-
+```
+```sh
 --- Final Answer ---
 Based on your numbers, the Return on Investment (ROI) for your Apple share would be 17.00%.
 
 According to current data, Apple (AAPL) is viewed favorably by analysts with a "Strong Buy" rating, supported by positive news sentiment around future sales. However, it's important to consider the associated risks, which include intense competition within the smartphone market and ongoing regulatory scrutiny.
+```
+
 💡 Future Improvements
 Integrate with real financial APIs (e.g., Yahoo Finance, Alpha Vantage) instead of the mock API.
 
