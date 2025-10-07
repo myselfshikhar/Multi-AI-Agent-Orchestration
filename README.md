@@ -41,7 +41,7 @@ User Query \
 │\
 └───> 5. Synthesizer Agent (Creates Final Answer)\
 │\
-└───> Final Answer to User\
+└───> Final Answer to User
 
 
 ---
